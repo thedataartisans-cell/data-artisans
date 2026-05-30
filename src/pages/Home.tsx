@@ -69,10 +69,10 @@ const services = [
 ]
 
 const stats = [
-  { val: '150+', label: 'Projects delivered' },
+  { val: '20+', label: 'Projects delivered' },
   { val: '98%', label: 'Client satisfaction' },
-  { val: '40+', label: 'Enterprises served' },
-  { val: '8+', label: 'Years of craft' },
+  { val: '10+', label: 'Enterprises served' },
+  { val: '5+', label: 'Years of craft' },
 ]
 
 const process = [

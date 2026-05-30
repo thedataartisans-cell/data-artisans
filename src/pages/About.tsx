@@ -47,11 +47,11 @@ const team = [
 ]
 
 const timeline = [
-  { year: '2016', title: 'Founded', desc: 'Started as a two-person consultancy focused on data strategy for startups in New York.' },
-  { year: '2018', title: 'Scaled Up', desc: 'Grew to a team of 10 after delivering data infrastructure for our first enterprise client.' },
-  { year: '2020', title: 'AI Practice', desc: 'Launched our AI & Machine Learning practice as demand for intelligent automation surged.' },
-  { year: '2022', title: '100 Projects', desc: 'Crossed 100 successfully delivered projects across 6 industries worldwide.' },
-  { year: '2024', title: 'Today', desc: 'A 25-person team serving 40+ enterprise clients across 12 countries.' },
+  { year: '2020', title: 'Founded', desc: 'Started as a boutique data consultancy focused on helping businesses unlock the value of their data.' },
+  { year: '2021', title: 'First Enterprise Client', desc: 'Delivered our first enterprise data infrastructure project, setting the standard for our craft.' },
+  { year: '2022', title: 'Growing Team', desc: 'Expanded to a team of 10+ specialists across data engineering, analytics, and AI.' },
+  { year: '2023', title: '20+ Projects', desc: 'Crossed 20 successfully delivered projects across 3+ countries worldwide.' },
+  { year: '2024', title: 'Today', desc: 'A team of 10–20 experts serving 10+ enterprise clients across 3+ countries.' },
 ]
 
 const testimonials = [
@@ -95,7 +95,7 @@ export default function About() {
             transition={{ duration: 0.55, delay: 0.2 }}
             style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: 1.8, fontWeight: 300, maxWidth: '420px', marginBottom: '2.5rem' }}
           >
-            Founded in 2016, The Data Artisans was born from a simple frustration:
+            Founded in 2020, The Data Artisans was born from a simple frustration:
             too many businesses were drowning in data but starving for insight.
             We set out to change that.
           </motion.p>
@@ -167,7 +167,7 @@ export default function About() {
               <p style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: 1.85, fontWeight: 300, marginBottom: '2rem' }}>
                 Every ambitious business deserves a data foundation that works — pipelines
                 that do not break, dashboards that tell the truth, and AI that actually helps.
-                That is what we build.
+                Since 2020, that is exactly what we have been building.
               </p>
               <Link to="/services">
                 <button className="btn-ghost" style={{ fontSize: '13px', padding: '10px 20px' }}>
