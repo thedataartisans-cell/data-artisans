@@ -242,6 +242,7 @@ const allServices: Record<string, {
       { name: 'Healthcare', desc: 'HIPAA compliance, PHI protection, and clinical data governance.' },
       { name: 'Retail', desc: 'Customer data privacy, GDPR compliance, and consent management.' },
       { name: 'Government', desc: 'Data sovereignty, security classification, and public sector compliance.' },
+      { name: 'Supply Chain', desc: 'End-to-end data visibility, supplier compliance, and logistics data governance.' },
     ],
     faqs: [
       { q: 'Do you help with GDPR compliance?', a: 'Yes — we implement the technical controls, data mapping, and documentation required for GDPR, CCPA, and other major regulations.' },
