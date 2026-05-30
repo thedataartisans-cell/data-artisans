@@ -77,20 +77,20 @@ export default function Footer() {
             We help ambitious businesses unlock the full power of their data — from strategy to execution.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <a href="mailto:hello@thedataartisans.com" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color 0.2s' }}
+            <a href="mailto:thedataartisans@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color 0.2s' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#60a5fa')}
               onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}
             >
-              <Mail size={13} /> hello@thedataartisans.com
+              <Mail size={13} /> thedataartisans@gmail.com
             </a>
             <a href="tel:+12345678900" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color 0.2s' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#60a5fa')}
               onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}
             >
-              <Phone size={13} /> +1 (234) 567-890
+              <Phone size={13} /> +1 (469) 910-4144
             </a>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: 'rgba(255,255,255,0.4)' }}>
-              <MapPin size={13} /> New York, NY — Remote Worldwide
+              <MapPin size={13} /> Dallas, TX — Remote Worldwide
             </div>
           </div>
         </div>
