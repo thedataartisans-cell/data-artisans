@@ -24,9 +24,9 @@ function Reveal({ children, style }: { children: React.ReactNode; style?: React.
 }
 
 const stats = [
-  { val: '2016', label: 'Year Founded' },
-  { val: '150+', label: 'Projects Delivered' },
-  { val: '40+', label: 'Enterprise Clients' },
+  { val: '2020', label: 'Year Founded' },
+  { val: '20+', label: 'Projects Delivered' },
+  { val: '10+', label: 'Enterprise Clients' },
   { val: '98%', label: 'Satisfaction Rate' },
 ]
 
@@ -38,7 +38,7 @@ const values = [
 ]
 
 const team = [
-  { name: 'Alex Rivera', role: 'Founder & CEO', expertise: 'Data Strategy & Architecture', initials: 'AR', color: '#2563eb' },
+  { name: 'Farah Mubeen', role: 'Founder & CEO', expertise: 'Data Strategy & Architecture', initials: 'FM', color: '#2563eb' },
   { name: 'Priya Mehta', role: 'Head of Data Engineering', expertise: 'Pipelines & Infrastructure', initials: 'PM', color: '#0891b2' },
   { name: 'James Osei', role: 'Lead Data Scientist', expertise: 'ML & Advanced Analytics', initials: 'JO', color: '#7c3aed' },
   { name: 'Sarah Chen', role: 'BI & Visualization Lead', expertise: 'Dashboards & Reporting', initials: 'SC', color: '#d97706' },
@@ -55,9 +55,9 @@ const timeline = [
 ]
 
 const testimonials = [
-  { text: 'The Data Artisans are not just consultants — they are true partners. They embedded with our team, understood our business deeply, and built something we are genuinely proud of.', name: 'Sarah Mitchell', role: 'CTO, FinEdge Solutions', initials: 'SM', color: '#2563eb' },
-  { text: 'What sets them apart is the combination of technical excellence and business understanding. They always connect the work back to what actually matters for the company.', name: 'James Okafor', role: 'Head of Analytics, RetailPro', initials: 'JO', color: '#0891b2' },
-  { text: 'Radically transparent, incredibly skilled, and genuinely invested in our success. The Data Artisans feel like an extension of our own team.', name: 'Priya Sharma', role: 'VP Operations, MedTech Corp', initials: 'PS', color: '#7c3aed' },
+  { text: 'The Data Artisans are not just consultants — they are true partners. They embedded with our team, understood our business deeply, and built something we are genuinely proud of.', role: 'Financial Services', initials: 'CT', color: '#2563eb' },
+  { text: 'What sets them apart is the combination of technical excellence and business understanding. They always connect the work back to what actually matters for the company.', role: 'Retail & E-commerce', initials: 'HA', color: '#0891b2' },
+  { text: 'Radically transparent, incredibly skilled, and genuinely invested in our success. The Data Artisans feel like an extension of our own team.', role: 'Healthcare Technology', initials: 'VP', color: '#7c3aed' },
 ]
 
 export default function About() {
@@ -129,9 +129,9 @@ export default function About() {
               without truly understanding the business behind the numbers.
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'rgba(37,99,235,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '13px', fontWeight: 600, color: 'var(--accent)', flexShrink: 0 }}>AR</div>
+              <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'rgba(37,99,235,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '13px', fontWeight: 600, color: 'var(--accent)', flexShrink: 0 }}>FM</div>
               <div>
-                <p style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text)' }}>Alex Rivera</p>
+                <p style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text)' }}>Farah Mubeen</p>
                 <p style={{ fontSize: '12px', color: 'var(--muted)' }}>Founder & CEO, The Data Artisans</p>
               </div>
             </div>
@@ -268,8 +268,8 @@ export default function About() {
           </motion.div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem' }}>
-            {testimonials.map((t) => (
-              <motion.div key={t.name} variants={fadeUp}
+            {testimonials.map((t, i) => (
+              <motion.div key={i} variants={fadeUp}
                 style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: '14px', padding: 'clamp(1.25rem, 2vw, 2rem)', transition: 'all 0.2s' }}
                 whileHover={{ y: -3, boxShadow: '0 12px 32px rgba(0,0,0,0.06)' }}
               >
@@ -278,7 +278,6 @@ export default function About() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <div style={{ width: '38px', height: '38px', borderRadius: '50%', background: `${t.color}12`, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: 600, color: t.color }}>{t.initials}</div>
                   <div>
-                    <p style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text)' }}>{t.name}</p>
                     <p style={{ fontSize: '12px', color: 'var(--muted)' }}>{t.role}</p>
                   </div>
                 </div>

@@ -54,7 +54,7 @@ const plans = [
       { text: 'Basic predictive modeling', included: true },
       { text: 'AI & automation solutions', included: false },
     ],
-    cta: 'Get Started', popular: true,
+    cta: 'Get in Touch', popular: true,
   },
   {
     name: 'Enterprise', tag: 'Full Service', price: 'Custom', period: '',
@@ -70,7 +70,7 @@ const plans = [
       { text: 'Custom ML & AI models', included: true },
       { text: 'AI & automation solutions', included: true },
     ],
-    cta: 'Contact Us', popular: false,
+    cta: 'Get in Touch', popular: false,
   },
 ]
 
@@ -219,16 +219,27 @@ export default function Pricing() {
                     <h3 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.03em' }}>{plan.name}</h3>
                   </div>
 
+                  {/* Price display */}
                   <div style={{ marginBottom: '1.25rem' }}>
-                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
-                      {plan.price !== 'Custom' && (
+                    {plan.name === 'Starter' ? (
+                      <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
                         <span style={{ fontSize: '15px', color: 'var(--muted)', fontWeight: 400 }}>from $</span>
-                      )}
-                      <span style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.8rem, 3vw, 2.2rem)', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.04em' }}>{plan.price}</span>
-                      {plan.period && (
+                        <span style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.8rem, 3vw, 2.2rem)', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.04em' }}>{plan.price}</span>
                         <span style={{ fontSize: '13px', color: 'var(--muted)' }}>/ {plan.period}</span>
-                      )}
-                    </div>
+                      </div>
+                    ) : (
+                      <div style={{
+                        display: 'inline-flex', alignItems: 'center', gap: '8px',
+                        background: `${plan.color}12`,
+                        border: `1px solid ${plan.color}30`,
+                        borderRadius: '100px', padding: '8px 16px',
+                      }}>
+                        <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: plan.color }} />
+                        <span style={{ fontSize: '13px', fontWeight: 600, color: plan.color }}>
+                          Tailored to your needs — let's talk
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   <p style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '1.5rem', fontWeight: 300 }}>{plan.desc}</p>
@@ -279,11 +290,26 @@ export default function Pricing() {
                   <p style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: plan.color, marginBottom: '0.4rem' }}>Monthly Retainer</p>
                   <h3 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.03em', marginBottom: '1.25rem' }}>{plan.name}</h3>
 
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', marginBottom: '1rem' }}>
-                    {plan.price !== 'Custom' && <span style={{ fontSize: '15px', color: 'var(--muted)' }}>$</span>}
-                    <span style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.8rem, 3vw, 2.2rem)', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.04em' }}>{plan.price}</span>
-                    {plan.price !== 'Custom' && <span style={{ fontSize: '13px', color: 'var(--muted)' }}>/month</span>}
-                  </div>
+                  {plan.name === 'Partner' ? (
+                    <div style={{
+                      display: 'inline-flex', alignItems: 'center', gap: '8px',
+                      background: `${plan.color}12`,
+                      border: `1px solid ${plan.color}30`,
+                      borderRadius: '100px', padding: '8px 16px',
+                      marginBottom: '1rem',
+                    }}>
+                      <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: plan.color }} />
+                      <span style={{ fontSize: '13px', fontWeight: 600, color: plan.color }}>
+                        Tailored to your needs — let's talk
+                      </span>
+                    </div>
+                  ) : (
+                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', marginBottom: '1rem' }}>
+                      <span style={{ fontSize: '15px', color: 'var(--muted)' }}>$</span>
+                      <span style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.8rem, 3vw, 2.2rem)', fontWeight: 800, color: 'var(--text)', letterSpacing: '-0.04em' }}>{plan.price}</span>
+                      <span style={{ fontSize: '13px', color: 'var(--muted)' }}>/month</span>
+                    </div>
+                  )}
 
                   <p style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '1.5rem', fontWeight: 300 }}>{plan.desc}</p>
 
@@ -315,7 +341,7 @@ export default function Pricing() {
                         e.currentTarget.style.color = plan.color
                       }}
                     >
-                      Get Started <ArrowRight size={14} />
+                      Get in Touch <ArrowRight size={14} />
                     </button>
                   </Link>
                 </motion.div>
