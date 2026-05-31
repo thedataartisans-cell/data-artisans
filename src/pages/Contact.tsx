@@ -58,7 +58,7 @@ const quickFaqs = [
 ]
 
 const contactDetails = [
-  { label: 'Email Us', value: 'hello@thedataartisans.com', href: 'mailto:hello@thedataartisans.com', icon: <Mail size={18} color="#2563eb" />, bg: 'rgba(37,99,235,0.08)' },
+  { label: 'Email Us', value: 'thedataartisans@gmail.com', href: 'mailto:thedataartisans@gmail.com', icon: <Mail size={18} color="#2563eb" />, bg: 'rgba(37,99,235,0.08)' },
   { label: 'Call Us', value: '+1 (234) 567-890', href: 'tel:+12345678900', icon: <Phone size={18} color="#0891b2" />, bg: 'rgba(8,145,178,0.08)' },
   { label: 'Location', value: 'New York, NY — Remote Worldwide', href: '#', icon: <MapPin size={18} color="#7c3aed" />, bg: 'rgba(124,58,237,0.08)' },
   { label: 'Response Time', value: 'Within 24 business hours', href: '#', icon: <Clock size={18} color="#059669" />, bg: 'rgba(5,150,105,0.08)' },
@@ -292,7 +292,7 @@ export default function Contact() {
 
                 {status === 'error' && (
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ padding: '12px 16px', background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: '8px', marginBottom: '1rem', fontSize: '13px', color: '#dc2626' }}>
-                    Something went wrong. Please try again or email us at hello@thedataartisans.com
+                    Something went wrong. Please try again or email us at thedataartisans@gmail.com
                   </motion.div>
                 )}
 
